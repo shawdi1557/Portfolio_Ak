@@ -1,0 +1,10 @@
+{
+  "description": "An interactive portfolio showcasing a software developer's skills and projects with Japanese manuscript-themed scroll animations and multimedia elements.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
