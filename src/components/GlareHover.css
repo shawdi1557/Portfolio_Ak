@@ -1,0 +1,47 @@
+/* ── GlareHover ── react-bits-style glare sweep card */
+.glare-hover {
+  position: relative;
+  width: var(--gh-width);
+  height: var(--gh-height);
+  background: var(--gh-bg);
+  border-radius: var(--gh-br);
+  border: 1px solid var(--gh-border);
+  overflow: hidden;
+}
+
+/* The glare beam — a diagonal gradient that sweeps across on hover */
+.glare-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--gh-size);
+  height: var(--gh-size);
+  background: linear-gradient(
+    var(--gh-angle),
+    transparent 0%,
+    var(--gh-rgba) 42%,
+    var(--gh-rgba) 58%,
+    transparent 100%
+  );
+  transform: translate(-120%, -120%);
+  transition: transform var(--gh-duration) ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hover: sweep beam diagonally across the card */
+.glare-hover:hover::before {
+  transform: translate(120%, 120%);
+}
+
+/* play-once: single-pass sweep, then done */
+.glare-hover--play-once:hover::before {
+  animation: gh-glare-once var(--gh-duration) ease forwards;
+  transition: none;
+}
+
+@keyframes gh-glare-once {
+  0%   { transform: translate(-120%, -120%); }
+  100% { transform: translate(280%, 280%); }
+}

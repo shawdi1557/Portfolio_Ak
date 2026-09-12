@@ -1,0 +1,11 @@
+{
+  "title": "Akshay Biju",
+  "description": "Software Developer — React, Python, Django. Building modern, scalable, user-focused digital experiences.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

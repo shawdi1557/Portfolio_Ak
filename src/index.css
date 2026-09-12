@@ -1,0 +1,145 @@
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --c-bg: #F7F4EE;
+  --c-bg2: #F0EDE6;
+  --c-fg: #1A1916;
+  --c-fg65: rgba(26,25,22,0.65);
+  --c-fg55: rgba(26,25,22,0.55);
+  --c-fg50: rgba(26,25,22,0.5);
+  --c-fg45: rgba(26,25,22,0.45);
+  --c-fg40: rgba(26,25,22,0.4);
+  --c-fg35: rgba(26,25,22,0.35);
+  --c-fg25: rgba(26,25,22,0.25);
+  --c-fg10: rgba(26,25,22,0.1);
+  --c-fg03: rgba(26,25,22,0.03);
+  --c-border: #D4CEC4;
+  --c-muted: #E4DFD5;
+  --c-accent: #2D5A27;
+  --c-nav-bg: rgba(247,244,238,0.92);
+  --c-card: #F7F4EE;
+}
+
+body.modern-dark {
+  --c-bg: #080808;
+  --c-bg2: #0D0D0C;
+  --c-fg: #EAE6DE;
+  --c-fg65: rgba(234,230,222,0.65);
+  --c-fg55: rgba(234,230,222,0.55);
+  --c-fg50: rgba(234,230,222,0.5);
+  --c-fg45: rgba(234,230,222,0.45);
+  --c-fg40: rgba(234,230,222,0.4);
+  --c-fg35: rgba(234,230,222,0.35);
+  --c-fg25: rgba(234,230,222,0.25);
+  --c-fg10: rgba(234,230,222,0.1);
+  --c-fg03: rgba(234,230,222,0.025);
+  --c-border: #222220;
+  --c-muted: #151514;
+  --c-accent: #4A8A42;
+  --c-nav-bg: rgba(8,8,8,0.6);
+  --c-card: #111110;
+  --glass-bg: rgba(255,255,255,0.045);
+  --glass-border: rgba(255,255,255,0.09);
+  --glass-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.07);
+  --glass-blur: 24px;
+}
+
+:root {
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  --glass-bg: rgba(255,255,255,0.65);
+  --glass-border: rgba(212,206,196,0.7);
+  --glass-shadow: 0 4px 24px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+  --glass-blur: 20px;
+}
+
+@theme {
+  --font-sans: 'Switzer', system-ui, sans-serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-japanese: 'Noto Serif JP', serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F7F4EE;
+  color: #1A1916;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.japanese-mode {
+  background-color: #0B0906;
+  color: #E2D5BE;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 L12 22' stroke='%23C4912A' stroke-width='1.5'/%3E%3Cpath d='M8 6 L16 6' stroke='%23C4912A' stroke-width='1'/%3E%3C/svg%3E") 12 2, crosshair;
+}
+
+::-webkit-scrollbar { width: 0; }
+* { scrollbar-width: none; }
+
+::selection {
+  background: rgba(196, 145, 42, 0.3);
+  color: #1A1916;
+}
+
+body.japanese-mode ::selection {
+  background: rgba(139, 18, 18, 0.4);
+  color: #E2D5BE;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.4; }
+  100% { transform: translateY(-100vh) rotate(15deg); opacity: 0; }
+}
+
+@keyframes inkReveal {
+  0% { clip-path: circle(0% at 50% 50%); }
+  100% { clip-path: circle(150% at 50% 50%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.contribution-cell {
+  border-radius: 2px;
+  transition: transform 0.15s ease;
+}
+
+.contribution-cell:hover {
+  transform: scale(1.4);
+}
