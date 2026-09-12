@@ -82,8 +82,9 @@ export default function About() {
             >
               Currently, I’m working as a Software Developer Intern at MINTS GLOBAL, where I contribute to the MINTS ERP System and gain hands-on experience working on real-world software solutions. I’m driven by curiosity, creativity, and a constant desire to build better things. Outside of development, I enjoy football, gaming, and creative editing with After Effects.
             </ScrollReveal>
-
+    
             <motion.div {...reveal(0.2)}>
+              <br></br>
               <div className="text-xs tracking-widest uppercase mb-4 font-semibold" style={{ color: "var(--c-fg35)" }}>
                 Interests
               </div>

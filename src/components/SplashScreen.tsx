@@ -94,7 +94,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
               <CountUp
                 to={100}
                 from={0}
-                duration={2.2}
+                duration={1.4}
                 startWhen={true}
                 onEnd={handleCountEnd}
                 className="splash-count"
@@ -123,7 +123,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
               <motion.div
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 2.2, ease: "easeInOut" }}
+                transition={{ duration: 1.4, ease: "easeInOut" }}
                 style={{ height: "100%", background: "#4A8A42" }}
               />
             </div>
