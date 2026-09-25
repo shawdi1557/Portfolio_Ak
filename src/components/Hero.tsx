@@ -237,7 +237,7 @@ export default function Hero({ isDark }: { isDark?: boolean }) {
               >
                 <div className="text-xs tracking-widest uppercase mb-0.5" style={{ color: "var(--c-fg40)" }}>Currently at</div>
                 <div className="text-sm font-semibold" style={{ color: "var(--c-fg)" }}>MINTS GLOBAL</div>
-                <div className="text-xs mt-0.5" style={{ color: "var(--c-accent)" }}>SDE Intern · 2025</div>
+                <div className="text-xs mt-0.5" style={{ color: "var(--c-accent)" }}>SDE Intern · 2026</div>
               </motion.div>
             </div>
           </motion.div>
