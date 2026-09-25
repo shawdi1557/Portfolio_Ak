@@ -75,7 +75,7 @@ export default function GitHubSection({ isDark }: { isDark: boolean }) {
             {/* Stats cards */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
               {[
-                { value: 56, label: "Contributions · 2026" },
+                { value: 83, label: "Contributions · 2026" },
                 { value: 14, label: "Public Repos" },
               ].map((stat) => (
                 <GlareHover
